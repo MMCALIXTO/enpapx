@@ -539,7 +539,7 @@ function addAttribute(attribute, id) {
   
         $('.modalDice').css('transform', 'rotate(0deg)')
         $('.modalDice').css('-webkit-transform', 'rotate(0deg)')
-      }, 20000)
+      }, 100000000000)
     }, 2000)
   
 
