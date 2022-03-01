@@ -460,7 +460,7 @@ function addAttribute(attribute, id) {
       <img class="attributeDice" src="./img/dado.png" alt="Dado">
     </a>
     <h3>${attribute.type}</h3>
-    <input type="text" name="appearance" value="${attribute.amount}"  id="attribute_input_${id}" >
+    <input type="text" name="appearance" value="${attribute.amount}"  id="attribute_input_${id}" disabled>
   </div>
   
 <script>
@@ -638,11 +638,15 @@ function tirar(){
   
   let current = Number($('#lifeCurrent').val()) - 1
   const max = Number($('#lifeMax').val())
-
+  
   
   data.life.current = current
   data.life.max = max
 
+  const zero = 0
+  if (current < zero) {
+    current.add(++zero)
+  }
 
 
   $('.lifeBar').css('width', `${calculateBar(data.life.current, data.life.max)}%`)
@@ -662,7 +666,9 @@ function add(){
   data.life.current = current
   data.life.max = max
 
-
+if (current > max) {
+    current.add(--max)
+  }
 
   $('.lifeBar').css('width', `${calculateBar(data.life.current, data.life.max)}%`)
   
@@ -671,6 +677,7 @@ function add(){
   
 
 }
+
 
 
 
