@@ -312,7 +312,7 @@
             Soco
         </td>
         <td>Fisico e Sangue</td>
-        <td><img onclick="rollDano_0()" class="attributeDice" src="./img/dado.png" alt="Dado" style="display: block; margin-left: auto; margin-right: auto; height: 20px; cursor: pointer;">1d8+5+d6</td>
+        <td><img onclick="rollDano_0()" class="attributeDice" src="./img/dado.png" alt="Dado" style="display: block; margin-left: auto; margin-right: auto; height: 20px; cursor: pointer;">2d8+5+1d6</td>
         <td>Adjacente</td>
         <td><img onclick="rollDano_1()" class="attributeDice" src="./img/dado.png" alt="Dado" style="display: block; margin-left: auto; margin-right: auto; height: 20px; cursor: pointer;">20</td>
         <td>+1d</td>
@@ -504,8 +504,8 @@
       
     
       setTimeout(() => {
-        let danoz = rollDice('1d8') + 5
-        let danodois = rollDice('2d6')
+        let danoz = rollDice('2d8') + 5
+        let danodois = rollDice('1d6')
         const diceNumber = danoz + danodois
         const diceType = "(Fis)" +danoz+ "+" +danodois+ "(Sangue)"
         $('#diceNumber').text(diceNumber)
@@ -543,8 +543,8 @@
       
     
       setTimeout(() => {
-        let danoz = rollDice('2d8') +5
-        let danodois = rollDice('2d6')
+        let danoz = rollDice('3d8') +5
+        let danodois = rollDice('1d6')
         const diceNumber = danoz + danodois
         const diceType = "(Fis)" +danoz+ "+" +danodois+ "(Sangue)"
         $('#diceNumber').text(diceNumber)
